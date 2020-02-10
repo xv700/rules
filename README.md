@@ -3,6 +3,13 @@ npm 引入方式标准
 10.不许使用var变量声明，由let和const替代   
 20.禁止使用setInterval    
 30.禁用eval  
+代替eval函数 
+```
+const evil = fn => {
+    return new Function("return " + fn)();
+}
+```
+
 40.自定义函数，参数不得超过两个，参数中不要使用回调函数（除非回调函数需要多次运行，例如XMLHttpRequest的进度回调函数），Promise替代，防止地狱回调  
 50.除独立的库，不要重复定义同样功能的函数  
 60.语言包要独立，不允许每个文件出现文字字符，全部包含到一处（例如中文语言包，英文语言包）
@@ -24,9 +31,3 @@ const toFileReader = (file,methods) => {
 }
 ```  
 
-10.代替eval 
-```
-const evil = fn => {
-    return new Function("return " + fn)();
-}
-```
