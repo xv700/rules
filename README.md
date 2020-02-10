@@ -7,7 +7,7 @@ npm 引入方式标准
 50.除独立的库，不要重复定义同样功能的函数  
 60.语言包要独立，不允许每个文件出现文字字符，全部包含到一处（例如中文语言包，英文语言包）
 
-FileReader的Promise写法
+0.FileReader的Promise写法
 ```
 const toFileReader = (file,methods) => {
     const readmethods=({DataURL:"readAsDataURL",ArrayBuffer:"readAsArrayBuffer",BinaryString:"readAsBinaryString",readAsText:"readAsText"})[methods]||"readAsDataURL";
@@ -22,8 +22,9 @@ const toFileReader = (file,methods) => {
         reader.onerror = error => reject(error);
     })
 }
-```
-代替eval 
+```  
+
+10.代替eval 
 ```
 const evil = fn => {
     return new Function("return " + fn)();
