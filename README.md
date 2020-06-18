@@ -15,10 +15,13 @@ const evil = fn => {
 60.语言包要独立，不允许每个文件出现文字字符，全部包含到一处（例如中文语言包，英文语言包）
 
 70.
+
 UUID：可以产生一个随机的不重复的包含字符串和数字的函数  
+```js
 function UUID(){  
   return +new Date+Math.random().toString(36).substr(2);  
 }  
+```
 
 0.FileReader的Promise写法
 ```
