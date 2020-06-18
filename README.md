@@ -4,7 +4,7 @@ npm 引入方式标准
 20.禁止使用setInterval    
 30.禁用eval  
 代替eval函数 
-```
+```js
 const evil = fn => {
     return new Function("return " + fn)();
 }
@@ -14,9 +14,7 @@ const evil = fn => {
 50.除去独立的库，不要重复定义同样功能的函数  
 60.语言包要独立，不允许每个文件出现文字字符，全部包含到一处（例如中文语言包，英文语言包）
 
-70.
-
-UUID：可以产生一个随机的不重复的包含字符串和数字的函数  
+70.UUID：可以产生一个随机的不重复的包含字符串和数字的函数  
 ```js
 function UUID(){  
   return +new Date+Math.random().toString(36).substr(2);  
